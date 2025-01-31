@@ -1,0 +1,662 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+main {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+main > section {
+    height: 100vh;
+    display: flex;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+h1 {
+    font-size: 5vw;
+}
+
+
+.titlepage {
+    height: 100vh;
+    width: 100vw;
+    background-color: #000;
+    display: flex;
+    overflow: hidden;
+}
+
+.titlepage .lefttwothird {
+    width: 70%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.titlepage .rightthird {
+    width: 30%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.titlepage .titleimage {
+    height: 100%;
+    transform: scaleX(-1);
+    position: absolute;
+    bottom: 0;
+    animation: fadeInFromRight 1s;
+}
+
+@keyframes fadeInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px) scaleX(-1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0) scaleX(-1);
+    }
+}
+
+@keyframes fadeInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+.titlebg {
+    height: 130%;
+    position: absolute;
+}
+
+
+
+.titletext {
+    position: absolute;
+    top: 50%;
+    height: 20vw;
+    margin-top: -10vw;
+    right: 10%;
+    font-size: 10vw;
+    line-height: 10vw;
+    letter-spacing: -0.1vw;
+    color: white;
+    text-align: right;
+    animation: fadeInFromLeft 1s;
+}
+
+.blacklayer {
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    mix-blend-mode: multiply;
+}
+
+
+.workexppage {
+    height: 100vh;
+    width: 100vw;
+    background-color: #000;
+    display: flex;
+    overflow: hidden;
+}
+
+.workexppage .leftthird {
+    width: 33%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.workexppage .titleimage {
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.workexppage .boxone {
+    height: 70%;
+    width: 40%;
+    rotate: 10deg;
+    position: absolute;
+    left: 50%;
+    bottom: -5%;
+    background: white;
+}
+
+.workexppage .boxtwo {
+    height: 70%;
+    width: 40%;
+    rotate: 10deg;
+    position: absolute;
+    left: 10%;
+    top: -5%;
+    background: white;
+}
+
+.workexppage .righttwothird {
+    width: 65%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.workexppage .topline {
+    width: 100%;
+    height: 30%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    color: #ffc898;
+    align-items: center;
+    font-size: 2.5rem;
+    padding: 0 30px;
+}
+
+.workexppage .middleline {
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.workexppage .cvitemwrapper {
+    height: 80%;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.7s ease-in-out;
+    margin: 10px;
+
+}
+
+.workexppage .cvitemfront {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    background-image: linear-gradient(to bottom right, #ffc898, #ffb87b);
+    color: #333;
+    padding: 10px;
+    text-align: center;
+    font-size: 1vw;
+}
+
+.workexppage .logo {
+    height: 25%;
+    margin: 30px;
+    border-radius: 5px;
+}
+
+.workexppage h2 {
+    margin: 10px 0;
+    height: 40%;
+}
+
+.workexppage .cvitemback {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    background-image: linear-gradient(to bottom right, #ffc898, #ffb87b);
+    color: #333;
+    transform: rotateY(180deg);
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    line-height: 150%;
+    font-size: 1vw;
+}
+
+.workexppage .cvitemwrapper:hover {
+    border-radius: 15px;
+    transform: rotateY(180deg);
+}
+
+.workexppage .bottomline {
+    width: 100%;
+    height: 20%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.educationpage {
+    height: 100vh;
+    width: 100vw;
+    background-color: #000;
+    display: flex;
+    overflow: hidden;
+}
+
+.educationpage .lefttwothird {
+    width: 65%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.educationpage .topline {
+    width: 100%;
+    height: 15%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    color: #ffc898;
+    align-items: center;
+    font-size: 2.5rem;
+    padding: 0 30px;
+}
+
+.educationpage .middleline {
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.educationpage .eduitemwrapper {
+    height: 80%;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.7s ease-in-out;
+    margin: 20px;
+
+}
+
+.educationpage .eduitemfront {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    background-image: linear-gradient(to bottom right, #ffc898, #ffb87b);
+    color: #333;
+    padding: 10px;
+    text-align: center;
+    font-size: 1vw;
+}
+
+.educationpage .logo {
+    height: 25%;
+    margin: 30px;
+    border-radius: 5px;
+}
+
+.educationpage h2 {
+    margin: 10px 0;
+    height: 40%;
+}
+
+.educationpage .eduitemback {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    background-image: linear-gradient(to bottom right, #ffc898, #ffb87b);
+    color: #333;
+    transform: rotateY(180deg);
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    line-height: 150%;
+    font-size: 1vw;
+}
+
+.educationpage .eduitemwrapper:hover {
+    border-radius: 15px;
+    transform: rotateY(180deg);
+}
+
+.educationpage .bottomline {
+    width: 100%;
+    height: 20%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.educationpage .rightthird {
+    width: 35%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.educationpage .titleimage {
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.blacklayer {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    mix-blend-mode: multiply;
+}
+
+.educationpage .boxone {
+    height: 70%;
+    width: 40%;
+    rotate: -10deg;
+    position: absolute;
+    right: 50%;
+    bottom: -5%;
+    background: white;
+}
+
+.educationpage .boxtwo {
+    height: 70%;
+    width: 40%;
+    rotate: -10deg;
+    position: absolute;
+    right: 10%;
+    top: -5%;
+    background: white;
+}
+
+
+.languagespage {
+    height: 100vh;
+    width: 100vw;
+    background-color: #000;
+    display: flex;
+    overflow: hidden;
+}
+
+#page-title {
+    font-size: 4vw;
+    transition: font-size 0.3s ease-in-out;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.languagespage .lefttwothird {
+    width: 65%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.languagespage .topline {
+    width: 100%;
+    height: 15%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    color: #ffc898;
+    align-items: center;
+    font-size: 2.5rem;
+    padding: 0 30px;
+}
+
+.languagespage .middleline {
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+}
+
+.languagespage .langitemwrapper {
+    height: 40%;
+    width: 90%;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    margin: 20px;
+    border-radius: 15px;
+    position: relative;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.languagespage .langitemfront:hover {
+    box-shadow: 0 0 15px rgba(255, 200, 152, 0.6), 0 0 30px rgba(255, 200, 152, 0.6);
+    border-radius: 15px;
+}
+
+.languagespage .langitemfront {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    background-image: linear-gradient(to bottom right, #ffc898, #ffb87b);
+    color: #333;
+    padding: 50px 50px 50px 50px;
+    text-align: left;
+    font-size: 1.3vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    
+}
+
+.languagespage .bottomline {
+    width: 100%;
+    height: 20%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.languagespage .rightthird {
+    width: 35%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.languagespage .titleimage {
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    border: 1px solid red; /* Temporary border for debugging */
+}
+
+.blacklayer {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    mix-blend-mode: multiply;
+}
+
+.languagespage .boxone {
+    height: 60%;
+    width: 50%;
+    rotate: 10deg;
+    position: absolute;
+    right: 35%;
+    bottom: -5%;
+    background: white;
+}
+
+.languagespage .boxtwo {
+    height: 60%;
+    width: 40%;
+    rotate: -60deg;
+    position: absolute;
+    right: 10%;
+    top: -5%;
+    background: white;
+}
+
+.projectspage {
+    height: 100vh;
+    width: 100vw;
+    background: url('./imgs/speed.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.projectspage .topline {
+    width: 100%;
+    height: 15%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    color: #ffc898;
+    align-items: center;
+    font-size: 2.5rem;
+    padding: 0 30px;
+}
+
+.cardslider {
+    position: relative;
+    width: 90%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.card {
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    text-align: justify;
+    background-color: #aaa;
+    border-radius: 10px;
+    padding: 20px;
+    transition: 0.5s;
+    opacity: 0;
+    transform: scale(0.8);
+    z-index: 0;
+}
+
+.card.active {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 1;
+}
+
+.card.previous, .card.next {
+    opacity: 0.5;
+    transform: scale(0.8);
+    z-index: 0;
+}
+
+.card.previous {
+    transform: translateX(-250px) scale(0.8);
+}
+
+.card.next {
+    transform: translateX(250px) scale(0.8);
+}
+
+
+
+#sliderpreviouscard, #slidernextcard {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 2;
+    transition: color 0.3s;
+}
+
+#sliderpreviouscard:hover, #slidernextcard:hover {
+    color: #ffc898;
+}
+
+#sliderpreviouscard {
+    left: 10px;
+}
+
+#slidernextcard {
+    right: 10px;
+}
+
+
+.scrollwatcher {
+    height: 10px;
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+    background-color: #888;
+    width: 100%;
+    scale: 0 1;
+    animation: scrollwatcher linear;
+    animation-timeline: scroll();
+}
+
+@keyframes scrollwatcher {
+    to { scale: 1 1; }
+}
+
+
